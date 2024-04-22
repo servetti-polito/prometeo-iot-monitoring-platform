@@ -1,0 +1,12 @@
+@media (max-height: 900px) {
+    #loginTitle{
+        font-size: 300% ;
+        margin:20px
+    }
+}
+@media (min-height: 901px){
+    #loginTitle{
+        font-size: 500% !important;
+        margin:50px
+    }
+}

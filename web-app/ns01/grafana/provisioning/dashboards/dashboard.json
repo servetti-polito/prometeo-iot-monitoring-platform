@@ -1,0 +1,3110 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "description": "",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "bgColor": "#ffffff",
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#966464",
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "hideTimeOverride": true,
+      "id": 16,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Temperature",
+          "urlPath": "/api/board/$boardId/unit/temperature"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "RH",
+          "urlPath": "/api/board/$boardId/unit/humidity"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Thermal Comfort",
+          "urlPath": "/api/board/$boardId/unit/thermal_comfort"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "E",
+          "urlPath": "/api/board/$boardId/unit/lux"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "SPL",
+          "urlPath": "/api/board/$boardId/unit/spLevel"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "TVOC",
+          "urlPath": "/api/board/$boardId/unit/tvoc"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "CO2",
+          "urlPath": "/api/board/$boardId/unit/co2"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "PM 10",
+          "urlPath": "/api/board/$boardId/unit/pm10"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "PM 2.5",
+          "urlPath": "/api/board/$boardId/unit/pm2_5"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "IEQ",
+          "urlPath": "/api/board/$boardId/unit/ieq"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Air Quality",
+          "urlPath": "/api/board/$boardId/unit/iaq_index"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Visual Comfort",
+          "urlPath": "/api/board/$boardId/unit/visual_comfort"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Acoustic Comfort",
+          "urlPath": "/api/board/$boardId/unit/acoustic_comfort"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Thermal comfort sbj",
+          "urlPath": "/api/board/$boardId/unit/thermal_comfort_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Acoustic comfort sbj",
+          "urlPath": "/api/board/$boardId/unit/acoustic_comfort_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Visual comfort sbj",
+          "urlPath": "/api/board/$boardId/unit/visual_comfort_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "Air quality sbj",
+          "urlPath": "/api/board/$boardId/unit/air_quality_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": " ",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "IEQ sbj",
+          "urlPath": "/api/board/$boardId/unit/env_quality_sbj"
+        }
+      ],
+      "timeFrom": "$ts",
+      "title": "All data",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "bgColor": "#ffffff",
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#966464",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Temperature / °C",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Temperature",
+          "mappings": [],
+          "max": 40,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 25
+              },
+              {
+                "color": "transparent",
+                "value": 27
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "hideTimeOverride": true,
+      "id": 11,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/temperature"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "bgColor": "#ffffff",
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#966464",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Temperature / °C",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Temperature",
+          "mappings": [],
+          "max": 40,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 19
+              },
+              {
+                "color": "transparent",
+                "value": 21
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 8
+      },
+      "hideTimeOverride": true,
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/temperature"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#966464",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Thermal Comfort / %",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Thermal Comfort",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sbj"
+            },
+            "properties": [
+              {
+                "id": "custom.drawStyle",
+                "value": "points"
+              },
+              {
+                "id": "custom.pointSize",
+                "value": 20
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 8
+      },
+      "hideTimeOverride": true,
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "sbj",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "B",
+          "urlPath": "/api/board/$boardId/unit/thermal_comfort_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/thermal_comfort"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#966464",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Relative Humidity / %",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Relative Humidity",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 25
+              },
+              {
+                "color": "transparent",
+                "value": 60
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "hideTimeOverride": true,
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/humidity"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#c4d3e0",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Carbon dioxide / ppm",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Carbon dioxide",
+          "mappings": [],
+          "max": 1000,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "transparent",
+                "value": 800
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 16
+      },
+      "hideTimeOverride": true,
+      "id": 6,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/co2"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#c4d3e0",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Volatile organic compounds / µg/m³",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "TVOC",
+          "mappings": [],
+          "max": 1000,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "transparent",
+                "value": 500
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 24
+      },
+      "hideTimeOverride": true,
+      "id": 4,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/tvoc"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#c4d3e0",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Particulate matter 2.5 / µg/m³",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Particulate matter 2.5",
+          "mappings": [],
+          "max": 50,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "transparent",
+                "value": 25
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 24
+      },
+      "hideTimeOverride": true,
+      "id": 9,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/pm2_5"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#c4d3e0",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Indoor Air Quality / %",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Indoor Air Quality",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sbj"
+            },
+            "properties": [
+              {
+                "id": "custom.pointSize",
+                "value": 20
+              },
+              {
+                "id": "custom.drawStyle",
+                "value": "points"
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 32
+      },
+      "hideTimeOverride": true,
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "sbj",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "B",
+          "urlPath": "/api/board/$boardId/unit/air_quality_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/iaq_index"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#eccb7b",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Illuminance / lux",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Illuminance",
+          "mappings": [],
+          "max": 2500,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "transparent",
+                "value": 0
+              },
+              {
+                "color": "green",
+                "value": 500
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 32
+      },
+      "hideTimeOverride": true,
+      "id": 5,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/lux"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#c4d3e0",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Particulate matter 10 / µg/m³",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Particulate matter 10",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "transparent",
+                "value": 50
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 40
+      },
+      "hideTimeOverride": true,
+      "id": 10,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/pm10"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#849783",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Sound pressure level / db",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Sound Pressure Level",
+          "mappings": [],
+          "max": 120,
+          "min": 20,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "transparent",
+                "value": 45
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 40
+      },
+      "hideTimeOverride": true,
+      "id": 8,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/spLevel"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#eccb7b",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Visual Comfort / %",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Visual Comfort",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sbj"
+            },
+            "properties": [
+              {
+                "id": "custom.drawStyle",
+                "value": "points"
+              },
+              {
+                "id": "custom.pointSize",
+                "value": 20
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 48
+      },
+      "hideTimeOverride": true,
+      "id": 15,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "sbj",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "B",
+          "urlPath": "/api/board/$boardId/unit/visual_comfort_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/visual_comfort"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#ff9724",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Indoor Environmental Quality / %",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Indoor Environmental Quality",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sbj"
+            },
+            "properties": [
+              {
+                "id": "custom.drawStyle",
+                "value": "points"
+              },
+              {
+                "id": "custom.pointSize",
+                "value": 20
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 48
+      },
+      "hideTimeOverride": true,
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "sbj",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "B",
+          "urlPath": "/api/board/$boardId/unit/env_quality_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/ieq"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "marcusolsson-json-datasource",
+        "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "fixedColor": "#849783",
+            "mode": "fixed"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "Acoustic Comfort / %",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 16,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 2,
+            "pointSize": 10,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "area"
+            }
+          },
+          "decimals": 0,
+          "displayName": "Acoustic Comfort",
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 90
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "sbj"
+            },
+            "properties": [
+              {
+                "id": "custom.drawStyle",
+                "value": "points"
+              },
+              {
+                "id": "custom.pointSize",
+                "value": 20
+              },
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "yellow",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 56
+      },
+      "hideTimeOverride": true,
+      "id": 14,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "timezone": [
+          "browser"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "sbj",
+              "type": "number"
+            }
+          ],
+          "hide": false,
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "B",
+          "urlPath": "/api/board/$boardId/unit/acoustic_comfort_sbj"
+        },
+        {
+          "cacheDurationSeconds": 300,
+          "datasource": {
+            "type": "marcusolsson-json-datasource",
+            "uid": "d1777f53-05fe-4a30-a97a-e15b40c4ff4e"
+          },
+          "fields": [
+            {
+              "jsonPath": "$.datapoints[*].date",
+              "type": "time"
+            },
+            {
+              "jsonPath": "$.datapoints[*].average",
+              "language": "jsonpath",
+              "name": "",
+              "type": "number"
+            }
+          ],
+          "method": "GET",
+          "params": [
+            [
+              "ts",
+              "$ts"
+            ],
+            [
+              "avg",
+              "$avg"
+            ]
+          ],
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/api/board/$boardId/unit/acoustic_comfort"
+        }
+      ],
+      "timeFrom": "$ts",
+      "transparent": true,
+      "type": "timeseries"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "1001",
+          "value": "1001"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "boardId",
+        "multi": false,
+        "name": "boardId",
+        "options": [
+          {
+            "selected": true,
+            "text": "1001",
+            "value": "1001"
+          }
+        ],
+        "query": "1001",
+        "queryValue": "1003",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": false,
+          "text": "acoustic_comfort",
+          "value": "acoustic_comfort"
+        },
+        "description": "",
+        "hide": 0,
+        "includeAll": false,
+        "label": "unitName",
+        "multi": false,
+        "name": "unitName",
+        "options": [
+          {
+            "selected": false,
+            "text": "temperature",
+            "value": "temperature"
+          },
+          {
+            "selected": false,
+            "text": "humidity",
+            "value": "humidity"
+          },
+          {
+            "selected": false,
+            "text": "thermal_comfort",
+            "value": "thermal_comfort"
+          },
+          {
+            "selected": false,
+            "text": "tvoc",
+            "value": "tvoc"
+          },
+          {
+            "selected": false,
+            "text": "lux",
+            "value": "lux"
+          },
+          {
+            "selected": false,
+            "text": "co2e",
+            "value": "co2e"
+          },
+          {
+            "selected": false,
+            "text": "co2",
+            "value": "co2"
+          },
+          {
+            "selected": false,
+            "text": "pressure",
+            "value": "pressure"
+          },
+          {
+            "selected": false,
+            "text": "iaq",
+            "value": "iaq"
+          },
+          {
+            "selected": false,
+            "text": "spLevel",
+            "value": "spLevel"
+          },
+          {
+            "selected": false,
+            "text": "hfLevel",
+            "value": "hfLevel"
+          },
+          {
+            "selected": false,
+            "text": "pm2_5",
+            "value": "pm2_5"
+          },
+          {
+            "selected": false,
+            "text": "pm10",
+            "value": "pm10"
+          },
+          {
+            "selected": false,
+            "text": "bvoc",
+            "value": "bvoc"
+          },
+          {
+            "selected": false,
+            "text": "ieq",
+            "value": "ieq"
+          },
+          {
+            "selected": true,
+            "text": "acoustic_comfort",
+            "value": "acoustic_comfort"
+          },
+          {
+            "selected": false,
+            "text": "visual_comfort",
+            "value": "visual_comfort"
+          }
+        ],
+        "query": "temperature, humidity, thermal_comfort, tvoc, lux, co2e, co2, pressure, iaq, spLevel, hfLevel, pm2_5, pm10, bvoc, ieq, acoustic_comfort, visual_comfort  ",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "48h",
+          "value": "48h"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "ts",
+        "multi": false,
+        "name": "ts",
+        "options": [
+          {
+            "selected": false,
+            "text": "90m",
+            "value": "90m"
+          },
+          {
+            "selected": true,
+            "text": "48h",
+            "value": "48h"
+          },
+          {
+            "selected": false,
+            "text": "7d",
+            "value": "7d"
+          },
+          {
+            "selected": false,
+            "text": "14d",
+            "value": "14d"
+          },
+          {
+            "selected": false,
+            "text": "6w",
+            "value": "6w"
+          },
+          {
+            "selected": false,
+            "text": "12w",
+            "value": "12w"
+          },
+          {
+            "selected": false,
+            "text": "12M",
+            "value": "12M"
+          }
+        ],
+        "query": "90m, 48h, 7d, 14d, 6w, 12w, 12M",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      },
+      {
+        "current": {
+          "selected": true,
+          "text": "rt",
+          "value": "rt"
+        },
+        "hide": 0,
+        "includeAll": false,
+        "label": "avg",
+        "multi": false,
+        "name": "avg",
+        "options": [
+          {
+            "selected": true,
+            "text": "rt",
+            "value": "rt"
+          },
+          {
+            "selected": false,
+            "text": "3h",
+            "value": "3h"
+          },
+          {
+            "selected": false,
+            "text": "24h",
+            "value": "24h"
+          },
+          {
+            "selected": false,
+            "text": "3d",
+            "value": "3d"
+          },
+          {
+            "selected": false,
+            "text": "1w",
+            "value": "1w"
+          },
+          {
+            "selected": false,
+            "text": "1M",
+            "value": "1M"
+          }
+        ],
+        "query": "rt, 3h, 24h, 3d, 1w, 1M",
+        "queryValue": "",
+        "skipUrlSync": false,
+        "type": "custom"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "prometeo",
+  "uid": "bdb8ca18-df79-4743-818a-ebc8123908e5",
+  "version": 30,
+  "weekStart": ""
+}

@@ -1,0 +1,139 @@
+@import 'color-theme';
+
+#personal {
+  .sv-footer__prev-btn, .sv-footer__next-btn, .sv-footer__complete-btn {
+    background-color: $primary-color !important;
+    font-size: 175%;
+  }
+
+  .sv-footer__prev-btn {
+    position: relative;
+    left: 5%;
+  }
+  .sv-selectbase__item {
+    margin-bottom: 0px;
+  }
+  .sv-container-modern {
+    margin: 0 auto;
+  }
+
+  .sv-title {
+    text-align: left;
+    font-size: 190%;
+    border-bottom: 0;
+    width: 280%;
+  }
+
+  .sv-page__title {
+    margin-bottom: 10px;
+    padding-left: 0.293em;
+    font-size: 300% !important;
+  }
+
+  @media (max-height: 1080px) {
+    .sv-title {
+      font-size: 150%;
+    }
+    .sv-page__title {
+      font-size: 265% !important;
+    }
+    .sv-dropdown,
+    .sv-selectbase__label {
+      font-size: 125% !important;
+    }
+    .sv-action-bar {
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-height: 900px) {
+    .sv-page__title {
+      font-size: 220% !important;
+    }
+    .sv-title {
+      font-size: 120%;
+    }
+  }
+
+  .sv-question {
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  .sv_qstn .sv-q-column-2, .sv-question .sv-q-column-2 {
+    width: 17%;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+    word-break: break-word;
+    font-size: 120%;
+    text-align: center;
+    margin: auto;
+    border-bottom: 0;
+    display: inline-block;
+    float: right;
+    padding-top: 0px !important;
+  }
+
+  .sv-dropdown {
+    width: 70%;
+    display: inline-block;
+    float: right;
+    font-size: 150%;
+  }
+
+  .sv-page__title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 0.293em;
+    font-size: 200%;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 10px;
+  }
+
+  .sv-row__question:first-child:last-child {
+    flex: none !important;
+    border-bottom: 1px solid $primary-color;
+  }
+
+  .sv-row:not(:last-child) {
+    padding-bottom: 0 !important;
+  }
+
+  .sv-selectbase__label {
+    position: relative;
+    cursor: inherit;
+    display: inline-block !important;
+    margin-left: 41px;
+    min-height: 30px;
+    border: 1px;
+    border-color: $primary-color;
+    font-size: 175%;
+  }
+
+  .sv-item__svg {
+    position: relative !important;
+  }
+
+  .sv-question__title--answer {
+    background-color: transparent !important;
+  }
+
+  .sv-item__control {
+    display: none;
+  }
+
+  .sv-footer.sv-action-bar {
+    display: block;
+    min-height: 2em;
+    padding: 0;
+    margin-left: 0px;
+  }
+
+  #sp_101 > .sv-components-column{
+   display: inline !important;
+  
+  }
+}

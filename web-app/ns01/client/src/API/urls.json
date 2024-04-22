@@ -1,0 +1,10 @@
+{
+    "domain": "/",
+    "private": "/api/prv/",
+
+    "survey" : "survey", 
+    "personal" : "personal",
+    "personalSurveys": "survey/user",
+    "latestBoardID": "survey/latest",
+    "grafanaProxy": "/chart/api/datasources/proxy/uid/d1777f53-05fe-4a30-a97a-e15b40c4ff4e/api/board/"
+}

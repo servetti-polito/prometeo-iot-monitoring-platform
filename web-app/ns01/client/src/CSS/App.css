@@ -1,0 +1,114 @@
+@media(min-height: 901px) {
+    #prometeoLogo {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        pointer-events: none;
+    }
+    #prometeoSmallLogo{
+        display:none;
+    }
+}
+@media(max-height: 900px)
+{
+    #prometeoLogo {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+        pointer-events: none;
+    }
+    #prometeoSmallLogo{
+        /*pointer-events: none;*/
+        font-size: 150%;
+        width:100%;
+        color:#FF9724;
+        text-align:center;
+        font-family:"Ink Free"
+    }
+}
+
+:root {
+    --primary-color: #ff9724;
+  }
+  
+.orange {
+    color: var(--primary-color);
+}
+
+.white {
+    color: white;
+}
+
+.black{
+    color: black;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-orange {
+    background-color: var(--primary-color);
+}
+
+.ink-free {
+    font-family: 'Ink Free'
+}
+
+.ita-eng{
+    position: fixed; 
+    top: 50px; 
+    right: 50px; 
+}
+
+.privacy{
+    position: fixed;
+    bottom: 50px; 
+    right: 50px; 
+}
+
+.sensor-pos{
+    position: fixed;
+    bottom: 40px; 
+    left: 50px; 
+} 
+
+.sensor{
+    border-color: var(--primary-color);
+    border-width: 2px;
+    color:var(--primary-color) !important;
+    background-color: white !important;
+} 
+
+.sensor:hover{
+    border-color: var(--primary-color);
+    color:var(--primary-color) !important;
+    background-color: white !important;
+
+}
+
+.sensor:focus,
+.sensor:active {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--primary-color);
+    color: var(--primary-color) !important;
+}
+
+.orange-border-bottom {
+    border-bottom: 2px solid var(--primary-color)
+}
+
+.orange-border-top {
+    border-top: 2px solid var(--primary-color)
+}

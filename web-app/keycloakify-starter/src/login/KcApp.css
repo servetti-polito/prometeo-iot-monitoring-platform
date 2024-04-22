@@ -1,0 +1,62 @@
+.my-color {
+	color: white;
+}
+
+.my-font {
+	font-family: 'Work Sans';
+}
+
+.my-root-class {
+	background: orange;
+}
+
+.my-root-class body {
+	background: orange;
+	height: 100vh;
+}
+
+@media (max-height: 900px) {
+	#surveyTime {
+		font-size: 1.1rem
+	}
+
+	#graphBox {
+		height: 65% !important;
+	}
+
+	.btn {
+		font-size: 150% !important;
+	}
+
+	#prometeoTitle {
+		font-size: 300%;
+		font-family: Ink Free !important;
+		background: white;
+		color: orange;
+	}
+
+	#kc-header-wrapper {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		padding-top: 62px;
+	}
+}
+
+@media (min-height: 901px) {
+	#prometeoTitle {
+		font-size: 400%;
+		font-family: Ink Free !important;
+		background: white;
+		color: orange;
+	}
+	#kc-header-wrapper {
+		padding-left: 0px !important;
+		padding-right: 0px !important;
+		padding-top: 62px;
+	}
+}
+
+.align-items-end {
+	display: flex;
+	align-items: flex-end;
+}

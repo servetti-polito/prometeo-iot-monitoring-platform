@@ -1,0 +1,34 @@
+version: '3.5'
+services:
+  ingress:
+    image: ingress_in_keycloack
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    healthcheck:
+      # test: curl --fail http://ns01-app-1; && curl --fail  http://ns02-app-1; && curl --fail  http://ns03-app-1
+      test: curl --fail http://ns01-app-1; && curl --fail  http://ns02-app-1;
+      # test: curl --fail http://ns01-app-1;
+      interval: 1m30s
+      timeout: 10s
+      retries: 10
+      start_period: 40s
+    networks:
+      - ns01
+      - ns02
+      # - ns03
+    ports:
+      - 80:80
+      - 443:443
+    restart: unless-stopped
+
+networks:
+  ns01:
+    name: ns01_default
+    external: true
+  ns02:
+    name: ns02_default
+    external: true
+  # ns03:
+  #   name: ns03_default
+  #   external: true

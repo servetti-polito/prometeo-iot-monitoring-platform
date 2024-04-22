@@ -1,0 +1,67 @@
+.h3 {
+    border-bottom: 1px solid #ff9724;
+}
+
+.modal-content {
+    width: 210%;
+    left: -50%;
+    max-height: 90vh;
+}
+
+.modal-body{
+    overflow-y:scroll;
+}
+
+@media (max-height: 900px) {
+    #surveyTime{
+        font-size: 110%;
+    }
+    #profileTitle{
+        font-size: 150% !important;
+        margin-bottom: 0;
+    }
+    #profileButton{
+        font-size: 120% !important;
+    }
+}
+@media (min-height: 901px) {
+    #surveyTime{
+        font-size: 115%;
+    }
+}
+
+
+[data-key="Q30"] [role="combobox"] h5,
+[data-key="Q40"]  [role="combobox"] h5{
+    border-radius: 50px !important;
+    text-align: center;
+    background-color: transparent !important;
+    border-bottom: 0px !important;
+
+}
+
+[data-key="Q50"]  [role="combobox"] h5,
+[data-key="Q60"]  [role="combobox"] h5{
+    border-radius: 50px !important;
+    text-align: center;
+    border-bottom: 0px !important;
+    background-color: transparent !important;
+}
+
+[data-key="Q70"]  [role="combobox"] h5,
+[data-key="Q80"]  [role="radiogroup"] h5,
+[data-key="Q90"]  [role="radiogroup"] h5{
+    border-radius: 50px !important;
+    text-align: center;
+    border-bottom: 0px !important;
+    background-color: transparent !important;
+}
+
+[data-key="Q100"]  [role="radiogroup"] h5,
+[data-key="Q110"]  [role="radiogroup"] h5{
+    border-radius: 50px !important;
+    text-align: center;
+    border-bottom: 0px !important;
+    background-color: transparent !important;
+}
+

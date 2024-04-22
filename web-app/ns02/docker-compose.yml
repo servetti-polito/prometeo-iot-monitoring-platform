@@ -1,0 +1,101 @@
+version: "3"
+services:
+  keycloack:
+    image: keycloak/keycloak:23.0.7
+    environment:
+      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+      KC_FEATURES: declarative-user-profile
+      KC_PROXY: edge
+    volumes:
+      - ./keycloak/realm/.:/opt/keycloak/data/import
+      - ./keycloak/plugins/.:/opt/keycloak/providers
+      # - ./keycloak/data/:/opt/keycloak/data/h2/
+    command:
+      - start-dev
+      - --import-realm
+      - --hostname-url=https://${DOMAIN}/
+    restart: unless-stopped
+    healthcheck:
+      test: "exit 0"
+  app:
+    image: nginx
+    volumes:
+      - "./nginx/nginx.conf:/etc/nginx/nginx.conf"
+      - "./nginx/includes/:/etc/nginx/includes/"
+    depends_on:
+      - keycloack
+      - server
+      - client
+      - grafana
+  grafana:
+    image: servetti/prometeo-grafana:latest
+    volumes:
+      - ./grafana/grafana_info:/var/lib/grafana
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+      - ./grafana/provisioning:/etc/grafana/provisioning
+      - ./grafana/provisioning/dashboards:/var/lib/grafana/dashboards
+    environment:
+      - GF_INSTALL_PLUGINS=marcusolsson-csv-datasource,marcusolsson-json-datasource
+      - GF_SERVER_DOMAIN=${DOMAIN}
+    restart: unless-stopped
+    user: "0"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  server:
+    image: server
+    build:
+      context: ./server
+    environment:
+      - keycloackClientId=${KEYCLOAK_CLIENT_ID}
+      - keycloackSecretId=${KEYCLOAK_SECRET_ID}
+      - adminUser=${KEYCLOAK_ADMIN_USER}
+      - adminPassword=${KEYCLOAK_ADMIN_USER_PASSWORD}
+      - domain=${DOMAIN}
+      - realmName=${KEYCLOAK_REALM}
+      - redirectPath=/auth/login/callback
+      - logoutPath=/
+      - studentSalt=${STUDENT_SALT}
+      - privateSalt=${PRIVATE_SALT}
+    volumes:
+      - "./server:/api/"
+      - "/api/node_modules"
+    depends_on:
+      keycloack:
+        condition: service_healthy
+    restart: unless-stopped
+  client:
+    build:
+      context: ./client
+      args:
+        VITE_APP_DOMAIN: ${DOMAIN}
+    environment:
+      CHOKIDAR_USEPOLLING: true
+      DATABASE_HOST: ${DATABASE_HOST} 
+      MYSQL_PORT: ${MYSQL_PORT}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    # volumes:
+    #   - "./client:/prometeo/"
+      # - "/prometeo/node_modules"
+      # - "./client/server:/prometeo/server"
+      # - "/prometeo/server/node_modules"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: on-failure
+  db:
+    image: mysql
+    build: ./database
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      DATABASE_HOST: ${DATABASE_HOST}
+    volumes:
+      - ./database/initQueries.sql:/docker-entrypoint-initdb.d/initQueries.sql
+    restart: unless-stopped
+    healthcheck:
+      test: "exit 0"

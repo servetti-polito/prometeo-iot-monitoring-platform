@@ -1,0 +1,897 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "p01",
+          "title": {
+            "default": "Gender",
+            "it": "Genere"
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Male",
+              "text": {
+                "it": "Maschio"
+              }
+            },
+            {
+              "value": "Female",
+              "text": {
+                "it": "Femmina"
+              }
+            }
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "dropdown",
+          "name": "p02",
+          "title": {
+            "default": "Age",
+            "it": "Età"
+          },
+          "titleLocation": "left",
+          "showOptionsCaption": false,
+"choices": [
+            "18-25",
+            "26-35",
+            "36-50",
+            "51-65",
+            "65+"
+          ],
+          "allowClear": false
+        },
+        {
+          "type": "dropdown",
+          "name": "p03",
+          "showOptionsCaption": false,
+          "title": {
+            "default": "Country of birth",
+            "it": "Paese di nascita"
+          },
+          "titleLocation": "left",
+          "choicesByUrl": {
+            "url": "https://surveyjs.io/api/CountriesExample"
+          },
+          "allowClear": false
+        },
+        {
+          "type": "dropdown",
+          "name": "p04",
+          "title": {
+            "default": "Educational qualification",
+            "it": "Qualifica professionale"
+          },
+          "titleLocation": "left",
+          "showOptionsCaption": false,
+"choices": [
+            {
+              "value": "Ph.D",
+              "text": {
+                "default": "Ph.D",
+                "it": "Dottorato di Ricerca"
+              }
+            },
+            {
+              "value": "Master's Degree",
+              "text": {
+                "it": "Laurea magistrale"
+              }
+            },
+            {
+              "value": "Bachelor's degree",
+              "text": {
+                "it": "Laurea triennale"
+              }
+            },
+            {
+              "value": "High School",
+              "text": {
+                "it": "Scuola secondaria di secondo grado"
+              }
+            },
+            {
+              "value": "None",
+              "text": {
+                "it": "Nessuno"
+              }
+            }
+          ],
+          "allowClear": false
+        },
+        {
+          "type": "dropdown",
+          "name": "p05",
+          "title": {
+            "default": "Intended use of the building",
+            "it": "Destinazione d’uso dell’edificio"
+          },
+          "titleLocation": "left",
+          "showOptionsCaption": false,
+"choices": [
+            {
+              "value": "Office",
+              "text": {
+                "it": "Ufficio"
+              }
+            },
+            {
+              "value": "School",
+              "text": {
+                "it": "Scuola"
+              }
+            },
+            {
+              "value": "Museum",
+              "text": {
+                "it": "Museo"
+              }
+            },
+            {
+              "value": "Hotel",
+              "text": {
+                "it": "Hotel"
+              }
+            },
+            {
+              "value": "Hospital",
+              "text": {
+                "it": "Ospedale"
+              }
+            },
+            {
+              "value": "House",
+              "text": {
+                "it": "Abitazione privata"
+              }
+            }
+          ],
+          "allowClear": false
+        },
+        {
+          "type": "dropdown",
+          "name": "p06",
+          "title": {
+            "default": "Ambit/Role",
+            "it": "Ambito/Ruolo"
+          },
+          "titleLocation": "left",
+          "showOptionsCaption": false,
+"choices": [
+            {
+              "value": "Engineering",
+              "text": {
+                "it": "Ingegneria"
+              },
+              "visibleIf": "{p05} = 'Office'"
+            },
+            {
+              "value": "Management",
+              "visibleIf": "{p05} anyof ['Office']"
+            },
+            {
+              "value": "Administration",
+              "text": {
+                "it": "Amministrazione"
+              },
+              "visibleIf": "{p05} anyof ['Office']"
+            },
+            {
+              "value": "Creative, design and architecture",
+              "text": {
+                "it": "Creativo, design e architettura"
+              },
+              "visibleIf": "{p05} = 'Office'"
+            },
+            {
+              "value": "Sales and public affairs",
+              "text": {
+                "it": "Vendite e affari pubblici"
+              },
+              "visibleIf": "{p05} = 'Office'"
+            },
+            {
+              "value": "Teaching and research",
+              "text": {
+                "it": "Didattica e ricerca"
+              },
+              "visibleIf": "{p05} = 'Office'"
+            },
+            {
+              "value": "Services",
+              "text": {
+                "it": "Servizi"
+              },
+              "visibleIf": "{p05} = 'Office'"
+            },
+            {
+              "value": "Head teacher",
+              "text": {
+                "it": "Dirigente scolastico"
+              },
+              "visibleIf": "{p05} = 'School'"
+            },
+            {
+              "value": "Teacher",
+              "text": {
+                "it": "Docente"
+              },
+              "visibleIf": "{p05} = 'School'"
+            },
+            {
+              "value": "Administrative staff",
+              "text": {
+                "it": "Personale amministrativo"
+              },
+              "visibleIf": "{p05} anyof ['School', 'Hotel','Hospital']"
+            },
+            {
+              "value": "Technical staff",
+              "text": {
+                "it": "Personale tecnico"
+              },
+              "visibleIf": "{p05} = 'School'"
+            },
+            {
+              "value": "Auxiliary staff",
+              "text": {
+                "it": "Personale ausiliario"
+              },
+              "visibleIf": "{p05} = 'School'"
+            },
+            {
+              "value": "Student",
+              "text": {
+                "it": "Studente"
+              },
+              "visibleIf": "{p05} = 'School'"
+            },
+            {
+              "value": "Manager",
+              "text": {
+                "it": "Direttore"
+              },
+              "visibleIf": "{p05} anyof ['Hotel', 'Museum']"
+            },
+            {
+              "value": "Research, care and management of collections staff",
+              "text": {
+                "it": "Personale addetto alla ricerca, cura e gestione delle collezioni"
+              },
+              "visibleIf": "{p05} = 'Museum'"
+            },
+            {
+              "value": "Services and relations with public staff",
+              "text": {
+                "it": "Personale dei servizi e rapporti con il pubblico"
+              },
+              "visibleIf": "{p05} = 'Museum'"
+            },
+            {
+              "value": "Administrative, financial, management and public relations staff",
+              "text": {
+                "it": "Personale amministrativo, finanziario, gestionale e delle relazioni pubbliche"
+              },
+              "visibleIf": "{p05} = 'Museum'"
+            },
+            {
+              "value": "Facilities and safety staff",
+              "text": {
+                "it": "Personale addetto alle strutture e sicurezza"
+              },
+              "visibleIf": "{p05} = 'Museum'"
+            },
+            {
+              "value": "Tourist Guide",
+              "text": {
+                "it": "Guida turistica"
+              },
+              "visibleIf": "{p05} = 'Museum'"
+            },
+            {
+              "value": "Tourist",
+              "text": {
+                "it": "Turista"
+              },
+              "visibleIf": "{p05} = 'Museum'"
+            },
+            {
+              "value": "Receptionist",
+              "visibleIf": "{p05} = 'Hotel'"
+            },
+            {
+              "value": "Chambermaid",
+              "text": {
+                "it": "Cameriere ai piani"
+              },
+              "visibleIf": "{p05} = 'Hotel'"
+            },
+            {
+              "value": "Waiter",
+              "text": {
+                "it": "Cameriere di sala"
+              },
+              "visibleIf": "{p05} = 'Hotel'"
+            },
+            {
+              "value": "Chef",
+              "text": {
+                "it": "Cuoco"
+              },
+              "visibleIf": "{p05} = 'Hotel'"
+            },
+            {
+              "value": "Barman",
+              "text": {
+                "it": "Barman"
+              },
+              "visibleIf": "{p05} = 'Hotel'"
+            },
+            {
+              "value": "Customer",
+              "text": {
+                "it": "Cliente"
+              },
+              "visibleIf": "{p05} = 'Hotel'"
+            },
+            {
+              "value": "Medical director",
+              "text": {
+                "it": "Direttore sanitario"
+              },
+              "visibleIf": "{p05} = 'Hospital'"
+            },
+            {
+              "value": "Hospital secretary",
+              "text": {
+                "it": "Personale della segreteria"
+              },
+              "visibleIf": "{p05} = 'Hospital'"
+            },
+            {
+              "value": "Doctor",
+              "text": {
+                "it": "Dottore/dottoressa"
+              },
+              "visibleIf": "{p05} = 'Hospital'"
+            },
+            {
+              "value": "Nurse",
+              "text": {
+                "it": "Infermiere/infermiera"
+              },
+              "visibleIf": "{p05} = 'Hospital'"
+            },
+            {
+              "value": "Social health operator",
+              "text": {
+                "it": "Operatore socio-sanitario"
+              },
+              "visibleIf": "{p05} = 'Hospital'"
+            },
+            {
+              "value": "Patient",
+              "text": {
+                "it": "Paziente"
+              },
+              "visibleIf": "{p05} = 'Hospital'"
+            },
+            {
+              "value": "Inhabitant",
+              "text": {
+                "it": "Inquilino"
+              },
+              "visibleIf": "{p05} = 'House'"
+            },
+            {
+              "value": "Guest",
+              "text": {
+                "it": "Ospite"
+              },
+              "visibleIf": "{p05} = 'House'"
+            },
+            {
+              "value": "Housekeeper",
+              "text": {
+                "it": "Governante"
+              },
+              "visibleIf": "{p05} = 'House'"
+            },
+            {
+              "value": "Other",
+              "text": {
+                "it": "Altro"
+              },
+              "visibleIf": "{p05} anyof ['Office', 'School', 'Museum', 'Hotel', 'Hospital']"
+            }
+          ],
+          "otherText": {
+            "default": "Other",
+            "it": "Altro"
+          },
+          "allowClear": false
+        },
+        {
+          "type": "dropdown",
+          "name": "p07",
+          "title": {
+            "default": "Number of people in the environment",
+            "it": "Numero di persone nell’ambiente"
+          },
+          "titleLocation": "left",
+          "showOptionsCaption": false,
+"choices": [
+            "1",
+            {
+              "value": "2 to 5",
+              "text": {
+                "it": "da 2 a 5"
+              }
+            },
+            {
+              "value": "6 to 10",
+              "text": {
+                "it": "da 6 a 10"
+              }
+            },
+            {
+              "value": "10+",
+              "text": {
+                "it": "più di 10"
+              }
+            }
+          ],
+          "allowClear": false
+        },
+        {
+          "type": "radiogroup",
+          "name": "p08",
+          "title": {
+            "default": "Visual impariments",
+            "it": "Disturbi della vista"
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p09",
+          "title": {
+            "default": "Hearing impariments",
+            "it": "Disturbi dell'udito"
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p10",
+          "title": {
+            "default": "Do you smoke?",
+            "it": "Fumi?"
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p11",
+          "title": {
+            "default": "Do you conduct a healthy lifestyle?",
+            "it": "Conduci uno stile di vita sano?"
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p12",
+          "title": {
+            "default": "Does an unsatisfactory Indoor Environmental Quality significantly reduce your work productivity?",
+            "it": "La qualità ambientale interna non soddisfacente riduce significativamente la tua produttività? "
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p13",
+          "title": {
+            "default": "Does an unsatisfactory Indoor Environmental Quality significantly reduce your well-being?",
+            "it": "La qualità ambientale interna non soddisfacente riduce significativamente il tuo benessere? "
+          },
+          "titleLocation": "left",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "it": "Si",
+                "default": "Yes"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        }
+      ],
+      "title": {
+        "default": "Would you provide information about yourself?",
+        "it": "Vuoi fornire informazioni su te stesso?"
+      }
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "expression",
+          "name": "question1",
+          "width": "800",
+          "minWidth": "800",
+          "maxWidth": "800",
+          "title": {
+            "default": "Do you have control on...?",
+            "it": "Hai il controllo su…?"
+          },
+          "hideNumber": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "p14",
+          "indent": 2,
+          "title": {
+            "default": "windows opening and closing",
+            "it": "Apertura e chiusure delle finestre"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p15",
+          "indent": 2,
+          "title": {
+            "default": "solar shading",
+            "it": "Schermature solari"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p16",
+          "indent": 2,
+          "title": {
+            "default": "electric lightings",
+            "it": "Apparecchi di illuminazione artificiale"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p17",
+          "indent": 2,
+          "title": {
+            "default": "heating system",
+            "it": "Impianto di riscaldamento"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p18",
+          "indent": 2,
+          "title": {
+            "default": "cooling system",
+            "it": "Impianto di raffrescamento"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p19",
+          "indent": 2,
+          "title": {
+            "default": "reducing annoyance from noise",
+            "it": "Riduzione del disturbo da rumore"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "expression",
+          "name": "question3",
+          "width": "800",
+          "minWidth": "800",
+          "maxWidth": "800",
+          "title": {
+            "default": "Do you think it's important to have control on...?",
+            "it": "Pensi che sia importante avere il controllo su…?"
+          },
+          "hideNumber": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "p20",
+          "indent": 2,
+          "title": {
+            "default": "windows opening and closing",
+            "it": "Apertura e chiusure delle finestre"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p21",
+          "indent": 2,
+          "title": {
+            "default": "solar shading",
+            "it": "Schermature solari"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p22",
+          "indent": 2,
+          "title": {
+            "default": "electric lightings",
+            "it": "Apparecchi di illuminazione artificiale"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p23",
+          "indent": 2,
+          "title": {
+            "default": "heating system",
+            "it": "Impianto di riscaldamento"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p24",
+          "indent": 2,
+          "title": {
+            "default": "cooling system",
+            "it": "Impianto di raffrescamento"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        },
+        {
+          "type": "radiogroup",
+          "name": "p25",
+          "indent": 2,
+          "title": {
+            "default": "reducing annoyance from noise",
+            "it": "Riduzione del disturbo da rumore"
+          },
+          "titleLocation": "left",
+          "hideNumber": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": {
+                "default": "Yes",
+                "it": "Si"
+              }
+            },
+            "No"
+          ],
+          "colCount": 2
+        }
+      ],
+      "title": {
+        "default": "Would you provide information about your behaviour?",
+        "it": "Vuoi fornire informazioni sul tuo comportamento nel tuo ambiente?"
+      }
+    }
+  ],
+  "showTitle": false,
+  "showCompletedPage": false,
+  "startSurveyText": {
+    "default": "Start",
+    "it": "Inizia"
+  },
+  "pagePrevText": {
+    "default": "Previous",
+    "it": "Precedente"
+  },
+  "pageNextText": {
+    "default": "Next",
+    "it": "Successivo"
+  },
+  "completeText": {
+    "default": "Complete",
+    "it": "Completato"
+  },
+  "previewText": {
+    "default": "Preview",
+    "it": "Anteprima"
+  },
+  "editText": {
+    "default": "Edit",
+    "it": "Modifica"
+  },
+  "widthMode": "responsive"
+}

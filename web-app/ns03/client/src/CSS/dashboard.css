@@ -1,0 +1,276 @@
+#Dashboard .btn-dash {
+  border-top-left-radius: 15px 15px !important;
+  border-bottom-left-radius: 15px 15px !important;
+  border-top-right-radius: 15px 15px !important;
+  border-bottom-right-radius: 15px 15px !important;
+  width: 100%;
+  font-size: 125% !important;
+}
+
+#Dashboard .btn-hintsmore {
+  border-top-left-radius: 15px 15px !important;
+  border-bottom-left-radius: 15px 15px !important;
+  border-top-right-radius: 15px 15px !important;
+  border-bottom-right-radius: 15px 15px !important;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 120% !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+#Dashboard .btn-compliances {
+  padding: 0px !important;
+  font-size: 150% !important;
+  border-radius: 20px !important;
+}
+
+#Dashboard .btn-topic {
+  padding: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top-left-radius: 15px 15px !important;
+  border-bottom-left-radius: 15px 15px !important;
+  border-top-right-radius: 15px 15px !important;
+  border-bottom-right-radius: 15px 15px !important;
+  width: 100%;
+  border: 2px solid #fff !important;
+}
+
+#Dashboard #timeButton {
+  font-size: 120% !important;
+  padding: 0px;
+  /*border-radius: 10px !important;*/
+}
+
+.btn-modalclose {
+  font-size: 120% !important;
+  padding: 0;
+  width: 20%;
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  border: 2px solid #ff9724 !important;
+  outline: none !important;
+  color: #ff9724 !important;
+}
+
+.overlay {
+  /*background: rgba(0, 0, 0, 0.2);*/
+  width: 130%;
+  height: 150%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+iframe {
+  z-index: 0;
+}
+#gaugeBox {
+  height: 87%;
+}
+#gaugeBox .col-4 {
+  padding: 0px !important;
+}
+.holder {
+  padding: 0px !important;
+  overflow: hidden;
+  /* position: relative; */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border: 10px solid;
+}
+
+.holderGauge {
+  padding: 0px !important;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  border-color: #fff;
+  height: 110px !important;
+}
+
+.mainColGauges {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#dashGraph {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#dashLogo {
+  width: 90%;
+  object-fit: contain;
+}
+
+
+
+#topicValueContainer {
+  font-size: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+#topicLabel {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+#topicValue {
+  margin-bottom: 4px;
+  font-size: 24px;
+  line-height: 24px;
+}
+#dashTitle {
+  font-size: 150%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#dashExplain {
+  font-size: 110%;
+  text-align: center;
+  padding: 20px;
+}
+
+
+@media (max-height: 900px) {
+  #legenda {
+    padding-top: 50px;
+  }
+  .btn-topic {
+    font-size: 110% !important;
+  }
+  #dashPrometeo {
+    font-size: 200%;
+  }
+
+  #clock {
+    font-size: 100%;
+  }
+  #compliance {
+    font-size: 120%;
+  }
+  #dashGauge {
+    position: absolute;
+    width: 190px;
+    height: 120px;
+  }
+  #dashIEQ {
+    position: absolute;
+    width: 300px;
+    height: 180px;
+  }
+  #PM10 {
+    top: -20px;
+  }
+  #timecol {
+    padding: 5px;
+  }
+  #hintsmore {
+    height: 5%;
+    /* padding-top: 5px; */
+  }
+  #graphBox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 70%;
+  }
+  #gauge .gauge-component-class {
+    max-width: 150px !important;
+  }
+  #gaugeIEQ .gauge-component-class {
+    max-width: 230px !important;
+  }
+
+  #dashLogo {
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 30px;
+  }
+  #imgTopic {
+    object-fit: contain;
+    height: 30%;
+    position: absolute;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+  }
+  
+  #imgIEQ {
+    object-fit: contain;
+    height: 50%;
+    position: absolute;
+    padding-bottom: 10px;
+    margin-bottom: 55px;
+  }
+}
+@media (min-height: 901px) {
+  .btn-topic {
+    font-size: 110% !important;
+  }
+  #timecol {
+    padding: 10px;
+  }
+  #clock {
+    font-size: 120%;
+  }
+  #dashPrometeo {
+    font-size: 300%;
+  }
+  #dashGauge {
+    width: 250px;
+    /* height:200px; */
+  }
+  #dashIEQ {
+    width: 350px;
+    height: 250px;
+    left: 5px;
+    top: -20px;
+  }
+  #hintsmore {
+    padding-top: 10px;
+  }
+  #graphBox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    height: 80%;
+  }
+  #gauge .gauge-component-class {
+    max-width: 250px !important;
+  }
+  #gaugeIEQ .gauge-component-class {
+    max-width: 400px !important;
+  }
+  #imgTopic {
+    object-fit: contain;
+    height: 30%;
+    position: absolute;
+    padding-bottom: 15px;
+    margin-bottom: 60px;
+  }
+  
+  #imgIEQ {
+    object-fit: contain;
+    height: 50%;
+    position: absolute;
+    padding-bottom: 10px;
+    margin-bottom: 55px;
+  }
+}

@@ -1,0 +1,172 @@
+.thermal {
+    background-color: rgba(167,101,102,0.6) !important;
+    border-top-left-radius: 50px 50px !important;
+    border-bottom-left-radius: 50px 50px !important;
+    border-top-right-radius: 50px 50px !important;
+    border-bottom-right-radius: 50px 50px !important;
+}
+.acoustic {
+    background-color: rgba(132, 151, 131,0.6) !important;
+    border-top-left-radius: 50px 50px !important;
+    border-bottom-left-radius: 50px 50px !important;
+    border-top-right-radius: 50px 50px !important;
+    border-bottom-right-radius: 50px 50px !important;
+}
+.visual {
+    background-color: rgba(236, 203, 123,0.6) !important;
+    border-top-left-radius: 50px 50px !important;
+    border-bottom-left-radius: 50px 50px !important;
+    border-top-right-radius: 50px 50px !important;
+    border-bottom-right-radius: 50px 50px !important;
+}
+.air {
+    background-color: rgba(196, 211, 224,0.6) !important;
+    border-top-left-radius: 50px 50px !important;
+    border-bottom-left-radius: 50px 50px !important;
+    border-top-right-radius: 50px 50px !important;
+    border-bottom-right-radius: 50px 50px !important;
+}
+
+.thermal_title{
+    border-bottom: 1px solid  rgba(167,101,102,0.6) !important;
+}
+.acoustic_title{
+    border-bottom: 1px solid  rgba(132, 151, 131,0.6) !important;
+}
+.visual_title{
+    border-bottom: 1px solid  rgba(236, 203, 123,0.6) !important;
+}
+.air_title{
+    border-bottom: 1px solid  rgba(196, 211, 224,0.6) !important;
+}
+
+.noBorder
+{
+    border-bottom: 0 !important;
+}
+
+#surveyjs .sv-footer__prev-btn, #surveyjs .sv-footer__next-btn, #surveyjs .sv-footer__complete-btn {
+    background-color: #FF9724!important;
+    /*font-size: 125%;*/
+    font-size: 175%;
+}
+
+#surveyjs .sv-container-modern {
+    margin: 0 auto;
+}
+
+#surveyjs .sv-imagepicker {
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+#surveyjs .sv-title {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #FF9724;
+    /*padding-bottom: 20px;*/
+    /*font-size: 175%*/font-size: 250%;
+}
+
+#surveyjs .sv_qstn .sv-q-column-2, #surveyjs .sv-question .sv-q-column-2 {
+    width: 50%;
+    padding-right: 1em;
+    box-sizing: border-box;
+    word-break: break-word;
+    padding-top: 25px;
+    font-size: 175%;
+    text-align: center;
+    margin: auto;
+}
+
+#surveyjs .sv-selectbase__label {
+    position: relative;
+    cursor: inherit;
+    display: inline-block !important;
+    margin-left: 41px;
+    min-height: 30px;
+    border: 1px;
+    border-color: #FF9724;
+    font-size: 110%;
+}
+
+.sv-selectbase .sv-selectbase__item.sv-q-col-1 {
+    padding-right: 0;
+    font-size: 170%;
+    margin:0px
+}
+
+.sv-question__erbox {
+    font-size: 150%;
+}
+
+.sv-imagepicker__text {
+    /*font-size: 200% !important;*/
+    padding-left: 0;
+}
+
+.sv-imagepicker__text {
+    /*font-size: 150%;*/
+    font-size: 175%;
+    padding-left: 0.24em;
+}
+
+.sv-root-modern .sv-description {
+    color: rgba(64, 64, 64, 0.5);
+    font-size: 175% !important;
+}
+
+#surveyjs .sv-item__svg {
+    position: relative !important;
+}
+
+#surveyjs .sv-question__title--answer {
+    background-color: transparent !important;
+}
+
+.sv-item__control {
+    display: none;
+}
+
+.sv-root-modern .sv-checkbox--checked .sv-checkbox__svg
+{
+    background-color: #FF9724 !important;
+    fill: rgb(255, 255, 255);
+}
+
+.sv-imagepicker__control {
+    background-color: #FF9724 !important;
+}
+
+.sv-root-modern .sv-imagepicker__item--checked .sv-imagepicker__image {
+    background-color: #FF9724 !important;
+    border-color: #FF9724 !important;
+    border-radius: 50%;
+}
+
+#surveyjs .sv-comment {
+    border-color: #FF9724 !important;
+}
+
+#surveyjs .sv-text {
+    border-color: lightgrey !important;
+    font-size: 200%;
+}
+
+#surveyjs .sv-imagepicker__item--inline:not(:last-child) {
+    margin-right: 0;
+}
+
+#surveyjs .sv-imagepicker__item--allowhover:hover .sv-imagepicker__image{
+    background:transparent !important;
+    border-color: transparent !important;
+}
+#surveyjs .sv-checkbox--allowhover:hover .sv-checkbox__svg {
+    border: 3px solid rgba(64,64,64,.5) !important;
+    background-color: transparent !important;
+    fill: #fff;
+}
+
+#surveyjs .sv-row:not(:last-child) {
+    padding-bottom: 0;
+}

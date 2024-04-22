@@ -1,0 +1,220 @@
+[
+    {
+      "boardID": 1,
+      "serialNumber": "17120003-00-19/001-000201",
+      "sensorNumber": 1,
+      "classroomName": "Aula 1P",
+      "surveyID": 2
+    },
+    {
+      "boardID": 1001,
+      "serialNumber": "17120003-00-19/001-000201",
+      "sensorNumber": 1,
+      "classroomName": "Aula 1P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1002,
+      "serialNumber": "17120003-00-19/001-000203",
+      "sensorNumber": 2,
+      "classroomName": "Aula 1P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1003,
+      "serialNumber": "17120003-00-19/001-000221",
+      "sensorNumber": 3,
+      "classroomName": "Aula 4P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1004,
+      "serialNumber": "17120003-00-19/001-000263",
+      "sensorNumber": 4,
+      "classroomName": "Aula 4P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1005,
+      "serialNumber": "17120003-00-19/001-000267",
+      "sensorNumber": 5,
+      "classroomName": "Aula 2P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1006,
+      "serialNumber": "17120003-00-19/001-000269",
+      "sensorNumber": 6,
+      "classroomName": "Aula 3P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1007,
+      "serialNumber": "17120003-00-19/001-000280",
+      "sensorNumber": 7,
+      "classroomName": "Corridoio Aule P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1008,
+      "serialNumber": "17120003-00-19/001-000284",
+      "sensorNumber": 8,
+      "classroomName": "Corridoio Aule P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1009,
+      "serialNumber": "17120003-00-19/001-000288",
+      "sensorNumber": 9,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1010,
+      "serialNumber": "17120003-00-19/001-000289",
+      "sensorNumber": 10,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1011,
+      "serialNumber": "17120003-00-19/001-000290",
+      "sensorNumber": 11,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1012,
+      "serialNumber": "17120003-00-19/001-000295",
+      "sensorNumber": 12,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1013,
+      "serialNumber": "17120003-00-19/001-000296",
+      "sensorNumber": 13,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1014,
+      "serialNumber": "17120003-00-19/001-000302",
+      "sensorNumber": 14,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1015,
+      "serialNumber": "17120003-00-19/001-000309",
+      "sensorNumber": 15,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1016,
+      "serialNumber": "17120003-00-19/001-000311",
+      "sensorNumber": 16,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1017,
+      "serialNumber": "17120003-00-19/001-000320",
+      "sensorNumber": 17,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1018,
+      "serialNumber": "17120003-00-19/001-000326",
+      "sensorNumber": 18,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1019,
+      "serialNumber": "17120003-00-19/001-000331",
+      "sensorNumber": 19,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1020,
+      "serialNumber": "17120003-00-19/001-000338",
+      "sensorNumber": 20,
+      "classroomName": "Aula 1P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1021,
+      "serialNumber": "17120005-00-19/001-000030",
+      "sensorNumber": 21,
+      "classroomName": "Aula 1P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1022,
+      "serialNumber": "17120005-00-19/001-000036",
+      "sensorNumber": 22,
+      "classroomName": "Aula 4P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1023,
+      "serialNumber": "17120005-00-19/001-000044",
+      "sensorNumber": 23,
+      "classroomName": "Aula 4P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1024,
+      "serialNumber": "17120005-00-19/001-000060",
+      "sensorNumber": 24,
+      "classroomName": "Corridoio Aule P",
+      "surveyID": 1
+    },
+    {
+      "boardID": 1025,
+      "serialNumber": "17120005-00-19/001-000063",
+      "sensorNumber": 25,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1026,
+      "serialNumber": "17120005-00-19/001-000073",
+      "sensorNumber": 26,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1027,
+      "serialNumber": "17120005-00-19/001-000076",
+      "sensorNumber": 27,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1028,
+      "serialNumber": "17120005-00-19/001-000078",
+      "sensorNumber": 28,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1029,
+      "serialNumber": "17120005-00-19/001-000090",
+      "sensorNumber": 29,
+      "classroomName": null,
+      "surveyID": 1
+    },
+    {
+      "boardID": 1030,
+      "serialNumber": "17120005-00-19/001-000091",
+      "sensorNumber": 30,
+      "classroomName": null,
+      "surveyID": 1
+    }
+  ]
+  

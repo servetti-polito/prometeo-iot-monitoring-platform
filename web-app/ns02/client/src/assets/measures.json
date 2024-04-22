@@ -1,0 +1,426 @@
+{
+    "RH": {
+      "labelText": {
+        "it": "Umidità relativa",
+        "en": "Relative Humidity"
+      },
+      "labelSymbol": "RH",
+      "grafana":{
+        "unitName":  "humidity",
+        "panelId": 3
+      },
+      "unit": "%",
+      "referenceValue": "25-60%",
+      "law": "EN 16798-1",
+      "more": {
+        "en": "Low indoor air humidity (<30%) causes vulnerable airways and dry and tired eyes, affecting the overall work performance. Increasing the indoor air humidity may be a treatment of the risk of infection and transport of virus. In fact, at lower relative humidity, exhaled droplets stay longer in the air and, due to their progressive shrinkage, they tend to reach easier the lower airways.",
+        "it": "Una bassa umidità dell'aria interna (<30%) provoca difficoltà respiratorie e occhi secchi e stanchi, influendo sulle prestazioni lavorative complessive. L'aumento dell'umidità dell'aria interna può rappresentare un rimedio al rischio di infezione e di trasporto dei virus. Infatti, con un'umidità relativa più bassa, le goccioline espirate rimangono più a lungo nell'aria e, a causa del loro progressivo restringimento, tendono a raggiungere più facilmente le vie aeree inferiori."
+      },
+      "hints": {
+        "en": "Try to ensure a relative humidity between 40-60%, through natural ventilation. According to the World Health Organization (WHO), this optimal range will reduce the spread of seasonal respiratory illnesses.",
+        "it": "Cerca di garantire un'umidità relativa tra il 40-60%, attraverso la ventilazione naturale. Secondo l'Organizzazione Mondiale della Sanità (OMS), questo intervallo è ottimale per ridurre la diffusione delle malattie respiratorie stagionali."
+      },
+      "description": {
+        "en": "The values giving the composition of the air in terms of water vapour in relation to the maximum amount it can hold at a given temperature characterize the relative humidity of the environment.",
+        "it": "I valori che forniscono la composizione dell'aria in termini di vapore acqueo in relazione alla quantità massima che può trattenerla ad una data temperatura caratterizzano l'umidità relativa dell'ambiente."
+      }
+    },
+    "T": {
+      "labelText": {
+        "it": "Temperatura dell'aria",
+        "en": "Air temperature"
+      },
+      "labelSymbol": "Tₐ",
+      "grafana":{
+        "unitName":  "temperature",
+        "panelId": 1,
+        "panelIdSummer": 11
+      },
+      "unit": "°C",
+      "referenceValue": "19-21°C",
+      "referenceValueSummer": "25-27°C",
+      "law": "Law 27/4/2022, n. 34",
+      "more": {
+        "en": "To be at the peak of their productivity, workers have to operate in a thermally comfortable environment. It has shown that the best thermal setting for an office ranges between 20°C and 26°C. \n If the temperature exceeds the former limit, the productivity decreases of 2% for each 1°C more.",
+        "it": "Per essere al massimo della loro produttività, i lavoratori devono operare in un ambiente termicamente confortevole. È stato dimostrato che l'ambiente termico migliore per un ufficio è compreso tra 20°C e 26°C. \n Se la temperatura supera questo limite, la produttività diminuisce del 2% per ogni grado centigrado in più."
+      },
+      "hints": {
+        "en": "Drink water in case of temperature higher than the acceptable range (about 1 glass every 15-20 minutes), and wear lightweight, breathable and comfortable cotton clothing",
+        "it": "Bevi acqua in caso di temperatura superiore all'intervallo di accettabilità (circa 1 bicchiere ogni 15-20 minuti) e indossa indumenti di cotone leggeri, traspiranti e confortevoli."
+      },
+      "description": {
+        "it": "La temperatura dell'aria è la temperatura dell'aria intorno al corpo umano.",
+        "en": "Air temperature is the temperature of the air around the human body."
+      }
+    },
+    "SPL": {
+      "labelText": {
+        "it": "Livello di pressione sonora",
+        "en": "Sound Pressure Level"
+      },
+      "labelSymbol": "SPL",
+      "grafana":{
+        "unitName":  "spLevel",
+        "panelId": 8
+      },
+      "unit": "dB(A)",
+      "referenceValue": "≤ 45 dB(A)",
+      "law": "NF S 31-080",
+      "more": {
+        "en": "Human ear is limited to the perception of sound pressure levels from 0 dB to 120 dB, that is considered the threshold of pain. Nevertheless, these limits depend on individual’s sensitivity. Human perception of sound frequency (known as “pitch”), ranges from approximately 20 to 20000 Hz, with augmented perception within the frequency range of human voice, that is between 1000 Hz and 6000 Hz.",
+        "it": "L'orecchio umano è in grado di percepire livelli di pressione sonora compresi tra 0 dB e 120 dB, considerata la soglia del dolore. Tuttavia, questi limiti dipendono dalla sensibilità individuale. La percezione umana della frequenza sonora (nota come \"pitch\") va da circa 20 a 20000 Hz, con un aumento della percezione nell'intervallo di frequenza della voce umana, cioè tra 1000 Hz e 6000 Hz."
+      },
+      "hints": {
+        "en": "A strategy to reduce the sound level is to move the point source away from people. As sample, moving a copy machine in another room can reduce the noise level by more than 15 dB. If you need to talk, move away from other people or choose a separate conference room.",
+        "it": "Una strategia per ridurre il livello di pressione sonora consiste nell'allontanare la sorgente dalle persone. Ad esempio, spostare una fotocopiatrice in un'altra stanza può ridurre il livello di pressione sonora di oltre 15 dB. Se devi parlare, allontanati dalle altre persone o scegli una sala conferenze apposita."
+      },
+      "description": {
+        "it": "Logaritmo del rapporto tra una determinata pressione sonora e la pressione sonora di riferimento. Il livello di pressione sonora in decibel è 20 volte il logaritmo in base dieci del rapporto.",
+        "en": "Logarithm of the ratio of a given sound pressure to the reference sound pressure. Sound pressure level in decibels is 20 times the logarithm to the base ten of the ratio."
+      }
+    },
+    "VOC": {
+      "labelText": {
+        "it": "Composti organici volatili",
+        "en": "Volatile Organic Compounds"
+      },
+      "labelSymbol": "VOC",
+      "grafana":{
+        "unitName":  "tvoc",
+        "panelId": 4
+      },
+      "unit": "µg/m³",
+      "referenceValue": "≤ 500 µg/m³",
+      "law": "WELL Building Standard",
+      "more": {
+        "en": "TVOCs are totally volatile organic compounds, with potential health effects depending on the level and the time of exposure. Short term effects could be headache, eyes, skin and respiratory tract irritation, bronchitis, central nervous system symptoms, cardiovascular and respiratory diseases, impacts on livers and cancer. TVOCs can be found in everyday products, such as paints, varnishes, detergents, cleaning products, but also photocopiers and printers.",
+        "it": "I TVOC sono composti organici volatili totali, con potenziali effetti sulla salute a seconda del livello e del tempo di esposizione. Gli effetti a breve termine possono comprendere mal di testa, irritazione degli occhi, della pelle e delle vie respiratorie, bronchite, disturbi del sistema nervoso centrale, malattie cardiovascolari e respiratorie, impatto sul fegato e cancro. I TVOC si trovano nei prodotti di uso quotidiano, come pitture, vernici, detergenti, prodotti per la pulizia, ma anche fotocopiatrici e stampanti."
+      },
+      "hints": {
+        "en": "In order to reduce the concentration of TVOCs in your indoor environment, often refresh the air and choose products with less or no TVOCs.",
+        "it": "Per ridurre la concentrazione di TVOC nell'ambiente interno rinfresca spesso l'aria e scegli prodotti contenenti meno o nessun TVOC."
+      },
+      "description": {
+        "it": "I composti organici volatili sono composti chimici organici la cui composizione consente loro di evaporare in normali condizioni atmosferiche di temperatura e pressione interne. Sono tossici per inalazione ed esposizione, con effetti cronici o acuti.",
+        "en": "Volatile organic compounds are organic chemical compounds whose composition makes it possible for them to evaporate under normal indoor atmospheric conditions of temperature and pressure. Are toxic by inhalation and exposition, with chronic or acute effects."
+      }
+    },
+    "CH2O": {
+        "labelText": {
+          "it": "Formaldeide",
+          "en": "Formaldehyde"
+        },
+        "labelSymbol": "CH₂O",
+        "grafana":{
+          "unitName":  "ch2o",
+          "panelId": 1
+        },
+        "unit": "µg/m³",
+        "referenceValue": "≤ 800 µg/m³",
+        "law": "norma CH2O",
+        "more": {
+          "en": "Formaldehyde is a colorless, flammable gas with a strong smell, highly reactive at room temperature. This compound can be found in building materials and insulating, most composite wood products, glues, paints and coatings, detergent, soaps and electronic equipment. Materials and products emit formaldehyde for several months, mainly in indoor environment with high relative humidity and high indoor temperature. Formaldehyde represents a risk to human health, causing irritation of the skin, eyes, nose throat, and with high levels of exposure may cause some types of cancers.",
+          "it": "La formaldeide è un gas incolore, infiammabile e dall'odore forte, altamente reattivo a temperatura ambiente. Questo composto si trova nei materiali da costruzione e isolanti, nella maggior parte dei prodotti in legno composito, nelle colle, nelle vernici, nei rivestimenti, nei detergenti, nei saponi e nelle apparecchiature elettroniche. I materiali e i prodotti emettono formaldeide per diversi mesi, soprattutto in ambienti interni con elevata umidità relativa e alta temperatura interna. La formaldeide rappresenta un rischio per la salute umana, in quanto provoca irritazione della pelle, degli occhi, del naso e della gola e un'esposizione prolungata può causare alcuni tipi di cancro."
+        },
+        "hints": {
+          "en": "In order to reduce the concentration of formaldehyde in your indoor environment, choose products that meet the standards on formaldehyde emissions, increase the rate of ventilation and ensure a relative humidity between 40-60%.",
+          "it": "Per ridurre la concentrazione di formaldeide nell'ambiente interno, scegli prodotti conformi agli standard sulle emissioni di formaldeide, aumenta il tasso di ventilazione e garantisci un'umidità relativa tra il 40-60%."
+        },
+        "description": {
+          "it": "La formaldeide è un gas incolore, infiammabile e altamente reattivo a temperatura ambiente. Si forma principalmente da numerose fonti naturali e attività antropogeniche.",
+          "en": "Formaldehyde is a colorless, flammable, and highly reactive gas at room temperature. It is formed primarily by numerous natural sources and anthropogenic activities."
+        }
+      },
+    "CO2": {
+      "labelText": {
+        "it": "Anidride carbonica",
+        "en": "Carbon dioxide"
+      },
+      "labelSymbol": "CO₂",
+      "grafana":{
+        "unitName":  "co2",
+        "panelId": 6
+      },
+      "unit": "ppm",
+      "referenceValue": "≤ 800 ppm",
+      "law": "EN 16798-1",
+      "more": {
+        "en": "Indoor CO2 concentration depends on many factors such as number of people in the space, activity carried out, time spent by the users in the indoor space, air exchange and outer air volume flow. Indoor concentration of CO2 greater than 1000 ppm, together with other air contaminant factors, could be associated to sick building syndrome (SBS) symptoms. These terms refer to an acute discomfort that can lead to headaches, irritation of nose, eyes and throat, coughing, nausea, difficulty concentrating, fatigue.",
+        "it": "La concentrazione di CO2 negli ambienti interni dipende da molti fattori come il numero di persone presenti nello spazio, l'attività svolta, il tempo trascorso dagli utenti nello spazio interno, il ricambio d'aria e il flusso di aria esterna. Una concentrazione interna di CO2 superiore a 1000 ppm, insieme ad altri fattori di contaminazione dell'aria, potrebbe essere associata ai sintomi della sindrome da edificio malato (Sick building syndrome - SBS). Questi termini si riferiscono a un disagio acuto che può provocare mal di testa, irritazione di naso, occhi e gola, tosse, nausea, difficoltà di concentrazione, affaticamento."
+      },
+      "hints": {
+        "en": "Very large increases in ventilation rates, sufficient to reduce indoor CO2 concentrations to approximately outdoor levels, would be expected to decrease prevalence of sick building syndrome (SBS) symptoms by 85%.",
+        "it": "Aumentando sensibilmente i tassi di ventilazione, in modo da rendere la concentrazione di CO2 negli ambienti interni pari a quella dell'aria esterna, la prevalenza dei sintomi della sindrome dell'edificio malato (Sick building syndrome - SBS) diminuirebbe dell'85%."
+      },
+      "description": {
+        "it": "L'anidride carbonica è un gas incolore e inodore a temperatura e pressione atmosferica. È prodotto dalla combustione di composti organici.",
+        "en": "Carbon dioxide is a colourless and odourless gas at atmospheric temperature and pressure. It is produced by the combustion of organic compounds."
+      }
+    },
+    "CO": {
+        "labelText": {
+          "it": "Monossido di carbonio",
+          "en": "Carbon monoxide"
+        },
+        "grafana":{
+          "unitName":  "co",
+          "panelId": 1
+        },
+        "labelSymbol": "CO",
+        "unit": "mg/m³",
+        "referenceValue": "≤ 100 mg/m³",
+        "law": "EN 16798-1",
+        "more": {
+          "en": "Carbon monoxide is an odorless, colorless, and tasteless gas caused by incomplete combustion. It is poisonous and potentially letal.",
+          "it": "Il monossido di carbonio è un gas inodore, incolore e insapore causato da un processo di combustione incompleta. È velenoso e potenzialmente letale."
+        },
+        "hints": {
+          "en": "Overconcentration of CO can be avoided by ensuring fresh air flow into your indoor space and using in a proper way all devices running on fossil fuels.",
+          "it": "La concentrazione eccessiva di CO può essere evitata garantendo un flusso d'aria fresca negli ambienti interni e utilizzando opportunamente tutti i dispositivi che funzionano con combistibili fossili."
+        },
+        "description": {
+          "it": "Il monossido di carbonio è un gas tossico incolore, non irritante, inodore e insapore. Viene prodotto dalla combustione incompleta di combustibili carboniosi come legno, benzina, carbone, gas naturale e cherosene.",
+          "en": "Carbon monoxide is a colorless, non-irritant, odourless and tasteless toxic gas. It is produced by the incomplete combustion of carbonaceous fuels such as wood, petrol, coal, natural gas, and kerosene."
+        }
+      },
+      "NO2": {
+        "labelText": {
+          "it": "Biossido di azoto",
+          "en": "Nitrogen dioxide"
+        },
+        "labelSymbol": "NO₂",
+        "grafana":{
+          "unitName":  "no2",
+          "panelId": 1
+        },
+        "unit": "µg/m³",
+        "referenceValue": "≤ 200 µg/m³",
+        "law": "norma NO2",
+        "more": {
+          "en": "Most nitrogen dioxide in the environment comes from burning fuel in vehicles and power plants, but also by natural activity such as lightning strikes, volcanoes, oceans, biological decay. Reacting with water, it turns into nitric acid, contributing to lake acidification and acid rain. Exposure to indoor NO2 can lead to allergic deseases like asthma.",
+          "it": "La maggior parte del biossido di azoto presente nell'ambiente proviene dalla combustione di carburante nei veicoli e nelle centrali elettriche, ma anche da attività naturali come fulmini, vulcani, oceani e decadimento biologico. Reagendo con l'acqua, si trasforma in acido nitrico, contribuendo all'acidificazione dei laghi e alle piogge acide. L'esposizione all'NO2 in ambienti chiusi può portare a malattie di tipo allergico come l'asma."
+        },
+        "hints": {
+          "en": "Indoor concentration of NO2 strictly depends on outdoor sources, such as local traffic or other combustion sources. If you work close to a busy road, avoid to open too often the window and prefer mechanical ventilation with an efficient filtration system. You can do also more, first for your office, than for the planet: encourage public transport, biking and walking to reduce NO2 emissions.",
+          "it": "La concentrazione interna di NO2 dipende strettamente dalle fonti esterne, come il traffico locale o altre fonti di combustione. Se lavori vicino a una strada trafficata, evita di aprire troppo spesso le finestre e preferisci una ventilazione meccanica con un sistema di filtraggio efficiente. Si può fare anche di più, prima per il proprio ufficio, poi per il pianeta: incoraggiare il trasporto pubblico, la bicicletta e gli spostamenti a piedi per ridurre le emissioni di NO2."
+        },
+        "description": {
+          "it": "Il biossido di azoto nella sua forma gassosa è volatile, di colore rossastro e più pesante dell'aria. Ha un caratteristico odore pungente percepibile da una concentrazione di 188 μg/m3 (0.1 ppm). È uno dei principali ossidi di azoto associati alle fonti di combustione.",
+          "en": "Nitrogen dioxide in its gaseous form is volatile, reddish-brown in color and heavier than air. It has a characteristic pungent odor perceptible from a concentration of 188 μg/m3 (0.1 ppm). It is one of the principal nitrogen oxides associated with combustion sources."
+        }
+      },
+    "PM10": {
+      "labelText": {
+        "it": "PM10",
+        "en": "Particulate Matter 10"
+      },
+      "labelSymbol": "PM10",
+      "grafana":{
+        "unitName":  "pm10",
+        "panelId": 10
+      },
+      "unit": "µg/m³",
+      "referenceValue": "≤ 50 µg/m³",
+      "law": "EN 16798-1",
+      "more": {
+        "en": "Particulate matter is a mixture of solid particles and liquid droplets found in the air. PM10 : inhalable particles, with diameters that are 10 micrometers or smaller.",
+        "it": "Il particolato è una miscela di particelle solide e goccioline liquide presenti nell'aria. PM10: particelle inalabili, con diametro pari o inferiore a 10 micrometri."
+      },
+      "hints": {
+        "en": "Remember to never smoke indoor, run a room purifier and don’t forget to monitor your air quality indoor and outdoor.",
+        "it": "Non fumare mai in ambienti chiusi, utilizza un purificatore d'ambiente e non dimenticare di monitorare la qualità dell'aria interna ed esterna."
+      },
+      "description": {
+        "it": "Le particelle inalabili, con diametri di 10 micrometri o meno.",
+        "en": "Inhalable particles, with diameters that are 10 micrometers or smaller."
+      }
+    },
+    "PM2.5": {
+      "labelText": {
+        "it": "PM2.5",
+        "en": "Particulate Matter 2.5"
+      },
+      "labelSymbol": "PM2.5",
+      "grafana":{
+        "unitName":  "pm2_5",
+        "panelId": 9
+      },
+      "unit": "µg/m³",
+      "referenceValue": "≤ 25 µg/m³",
+      "law": "EN 16798-1",
+      "more": {
+        "en": "Particulate matter are suspended particles, found in dust, sort, dirt and smoke. The major sources of PM are anthropical (power plant combustion, vehicle combustion, wildfires). PM2.5 particles measure 2.5 microns or less in diameter. They causes 7 million preventable deaths every year, as they can be suspended in the air for longer and be absorbed into the bloodstream through inhalation. PM 10, instead measure 10 micrometers in diameter or less, and can cause tissues damage and asthma, in the long term.",
+        "it": "Il particolato è costituito da particelle in sospensione che si trovano nella polvere, nella sabbia e nel fumo. Le principali fonti di PM sono di origine antropica (combustione di centrali elettriche, combustione di veicoli, incendi). Le particelle PM2.5 misurano 2.5 micron o meno di diametro. Causano 7 milioni di morti evitabili ogni anno, poiché possono rimanere sospese nell'aria più a lungo ed essere assorbite nel flusso sanguigno attraverso l'inalazione. Le particelle di PM10, invece, misurano 10 micrometri di diametro o meno e possono causare danni ai tessuti e asma, a lungo termine."
+      },
+      "hints": {
+        "en": "Remember to never smoke indoor, run a room purifier and don’t forget to monitor your air quality indoor and outdoor.",
+        "it": "Non fumare mai in ambienti chiusi, utilizza un purificatore d'ambiente e non dimenticare di monitorare la qualità dell'aria interna ed esterna."
+      },
+      "description": {
+        "it": "Il particolato è una miscela di particelle solide e goccioline liquide presenti nell'aria. PM2.5: particelle fini inalabili, con diametro pari o inferiore a 2,5 micrometri.",
+        "en": "Particulate matter is a mixture of solid particles and liquid droplets found in the air. PM2.5 : fine inhalable particles, with diameters that are 2.5 micrometers or smaller."
+      }
+    },
+    "E": {
+      "labelText": {
+        "it": "Illuminazione",
+        "en": "Illuminance"
+      },
+      "labelSymbol": "E",
+      "grafana":{
+        "unitName":  "lux",
+        "panelId": 5
+      },
+      "unit": "lux",
+      "referenceValue": "≥ 500 lux",
+      "law": "EN 12464-1",
+      "more": {
+        "en": "An higher illuminance improves subjective alertness and vitality of the employees, who as a consequence feel less tired, more energic and have shorter reaction times on the psychomotor vigilance tasks.",
+        "it": "Un'illuminazione più elevata migliora la prontezza soggettiva e la vitalità dei dipendenti, che di conseguenza si sentono meno stanchi, più energici e hanno tempi di reazione più brevi nei compiti di prontezza psicomotoria."
+      },
+      "hints": {
+        "en": "Particularly strong shadows can cause the visual apparatus to adapt too abruptly. For example, for paper-based tasks, avoid to put objects or your arms between light direction and you.",
+        "it": "Ombre particolarmente marcate possono causare un adattamento troppo brusco dell'apparato visivo. Ad esempio, per i compiti su carta, evita di interporre oggetti o posizionare le braccia tra la direzione della luce e te."
+      },
+      "description": {
+        "it": "L'illuminanza è il rapporto tra il flusso luminoso incidente su una superficie elementare e l'area della superficie elementare stessa.",
+        "en": "Illuminance is the ratio between the luminous flux incident on an elementary surface and the area of the elementary surface itself."
+      }
+    },
+    "IEQ": {
+      "labelText": {
+        "it": "Qualità dell'ambiente interno",
+        "en": "Indoor Environmental Quality"
+      },
+      "labelSymbol": "IEQ",
+      "unit": "%",
+      "colors": ["#D6811D", "#FF9724", "#FFB54B"],
+      "grafana":{
+        "unitName":  "ieq",
+        "panelId": 12
+      },
+      "referenceValue": "",
+      "law": "",
+      "more": {
+        "en": "",
+        "it": ""
+      },
+      "hints": {
+        "en": "",
+        "it": ""
+      },
+      "description": {
+        "it": "La Qualità Ambientale Interna (IEQ) è la caratterizzazione fisica degli ambienti interni in termini di comfort termico, acustico, illuminazione e qualità dell'aria interna.",
+        "en": "Indoor Environmental Quality (IEQ) is the physical characterization of indoor environments in terms of thermal, acoustic, lighting, and indoor air quality."
+      }
+    },
+    "Temp": {
+      "labelText": {
+        "it": "Comfort termico",
+        "en": "Thermal Comfort"
+      },
+      "labelSymbol": "Theramal Comfort",
+      "unit": "%",
+      "grafana":{
+        "unitName":  "thermal_comfort",
+        "panelId": 2
+      },
+      "colors": ["#A28682", "#C2A29F", "#E2C1BE"],
+      "referenceValue": "",
+      "law": "",
+      "more": {
+        "en": "Thermal comfort is related to occupants' health, well-being and productivity and is appraised as one of the highest contributing factors to overall human comfort in buildings. Thermal comfort is interconnected with integumentary, endocrine and respiratory body systems and it may impact multiple health outcomes. For example asthma in adults can be caused by exposure to cold air and sudden temperature change.",
+        "it": "Il comfort termico è legato alla salute, al benessere e alla produttività degli occupanti ed è considerato uno dei fattori che maggiormente contribuiscono alla percezione del comfort complessivo negli edifici. Il comfort termico è interconnesso con i sistemi tegumentario, endocrino e respiratorio e può avere ripercussioni su molteplici aspetti sanitari. Ad esempio, l'asma negli adulti può essere causata dall'esposizione all'aria fredda e agli sbalzi di temperatura."
+      },
+      "hints": {
+        "en": "Thermal comfort is perceived differently by each individual and depends on, among other factors, the activity you are performing and what you are wearing. To ensure your thermal comfort without compromising the perception of others, adopt a flexible dress code.",
+        "it": "Il comfort termico è percepito in modo diverso da ogni individuo e dipende, tra gli altri fattori, dall'attività che si sta svolgendo e da ciò che si indossa. Per garantire il tuo comfort termico, senza compromettere la percezione degli altri, adotta un abbigliamento flessibile."
+      },
+      "description": {
+        "it": "Il comfort termico è quella condizione mentale che esprime la soddisfazione dell'ambiente termico.",
+        "en": "Thermal comfort is that condition of mind which expresses satisfaction with the thermal environment."
+      }
+    },
+    "Air": {
+      "labelText": {
+        "it": "Qualità dell'aria interna",
+        "en": "Indoor Air Quality"
+      },
+      "labelSymbol": "Indoor Air Quality",
+      "grafana":{
+        "unitName":  "iaq_index",
+        "panelId": 7
+      },
+      "colors": ["#A7B8C9", "#C4D3E0", "#E0EBF2"], 
+      "unit": "%",
+      "referenceValue": "",
+      "law": "",
+      "more": {
+        "en": "We spend most of our time in closed spaces (homes, offices, schools, or other building environments) in which we are exposed to innumerable air contaminants, including biological agents and chemical pollutants that easily enter our body through inhalation. \n In the recent global burden of disease study, indoor air pollution was rated as the third most important source of ill health for the world’s population. Health effects due to exposure to indoor air pollutants can be short and long term and of different severity. Furthermore has been found out a relationship between indoor air quality and occupants' productivity in buildings: on average, 10% productivity loss is recorded in office buildings in the USA. About 35% of total absenteeism can be attributed to insufficient provision of fresh air in buildings. On the other hand, productivity can be improved up to 29% providing adequate ventilation in buildings.",
+        "it": "Trascorriamo la maggior parte del nostro tempo in spazi chiusi (case, uffici, scuole o altri ambienti) in cui siamo esposti a innumerevoli contaminanti dell'aria, tra cui agenti biologici e inquinanti chimici che entrano facilmente nel nostro corpo attraverso l'inalazione. \n Nel recente studio sul bilancio globale delle malattie, l'inquinamento dell'aria interna è stato classificato come la terza più importante fonte di patologie per la popolazione mondiale. Gli effetti sulla salute dovuti all'esposizione agli inquinanti dell'aria interna possono essere a breve e a lungo termine e di diversa entità. È stata inoltre rilevata una relazione tra la qualità dell'aria interna e la produttività degli occupanti degli edifici: in media, negli Stati Uniti si registra una perdita di produttività del 10% negli edifici adibiti a ufficio. Circa il 35% dell'assenteismo totale può essere attribuito all'insufficiente fornitura di aria fresca negli edifici. D'altra parte, la produttività può essere migliorata fino al 29% fornendo una ventilazione adeguata negli edifici."
+      },
+      "hints": {
+        "en": "EPA guidelines to improve the indoor air quality of your office suggest to:\n • Do not block air vents or grilles.\n • Comply with the office and building smoking policy.\n • Water and maintain office plants properly.\n • Dispose of garbage promptly and properly.\n • Store food properly.\n • Avoid bringing products into the building that could release harmful or bothersome odors or contaminants.\n • Notify your building or facility manager immediately if you suspect an indoor air quality problem.",
+        "it": "Le linee guida dell'EPA per migliorare la qualità dell'aria interna dell'ufficio suggeriscono di:\n - Non ostruire le prese d'aria o le griglie.\n - Rispettare la politica sul fumo dell'ufficio e dell'edificio.\n - Innaffiare e mantenere correttamente le piante dell'ufficio.\n - Smaltire i rifiuti in modo tempestivo e corretto.\n - Conservare correttamente gli alimenti.\n - Evitare di introdurre nell'edificio prodotti che potrebbero rilasciare odori nocivi o fastidiosi o contaminanti.\n - Avvisare immediatamente il responsabile dell'edificio o della struttura se si sospetta un problema di qualità dell'aria interna."
+      },
+      "description": {
+        "it": "La qualità dell'aria interna è considerata accettabile quando non vi sono specifici inquinanti a concentrazioni dannose e non vi sono condizioni che potrebbero essere associate a lamentele sulla salute o il comfort degli occupanti.",
+        "en": "Indoor air quality is considered acceptable when there are no specific pollutants in harmful concentrations and no conditions that are likely to be associated with occupant's health or comfort complaints."
+      }
+    },
+    "Light": {
+      "labelText": {
+        "it": "Comfort visivo",
+        "en": "Visual Comfort"
+      },
+      "labelSymbol": "Visual Comfort",
+      "grafana":{
+        "unitName":  "visual_comfort",
+        "panelId": 15
+      },
+      "colors": ["#C3A469", "#ECCB7B", "#FFDDA5"],
+      "unit": "%",
+      "referenceValue": "",
+      "law": "",
+      "more": {
+        "en": "Visual comfort is defined as “a subjective condition of visual well-being induced by the visual environment”. The physiology of human eye, the spectral emission of the light source, the amount of light and its distribution on surfaces are the main aspects that may affect visual comfort. \n Moreover, daylight should be preferred, as it is the main regulator system for the human body. It controls people circadian rhythm, providing physical and mental energy for the day. This is the reason why a well-designed illumination system can really improve people quality of life.",
+        "it": "Il comfort visivo è definito come \"una condizione soggettiva di benessere visivo indotta dall'ambiente luminoso\". La fisiologia dell'occhio umano, l'emissione spettrale della sorgente luminosa, la quantità di luce e la sua distribuzione sulle superfici sono i principali aspetti che possono influenzare il comfort visivo. \n Inoltre, la luce diurna sarebbe da preferire in quanto principale sistema di regolazione del corpo umano. Essa controlla il ritmo circadiano delle persone, fornendo energia fisica e mentale per la giornata. Per questo motivo un sistema di illuminazione ben progettato può davvero migliorare la qualità della vita delle persone!"
+      },
+      "hints": {
+        "en": "Use the shading system wisely to improve your visual comfort.",
+        "it": "Usa il sistema di schermatura con criterio per migliorare il tuo comfort visivo."
+      },
+      "description": {
+        "it": "Il comfort visivo è quella condizione di soddisfazione dei requisiti visivi espressi dall'utente.",
+        "en": "Visual comfort is that condition of satisfaction of visual requirements expressed by the user."
+      }
+    },
+    "Sound": {
+      "labelText": {
+        "it": "Comfort acustico",
+        "en": "Acoustic Comfort"
+      },
+      "labelSymbol": "Acoustic Comfort",
+      "grafana":{
+        "unitName":  "acoustic_comfort",
+        "panelId": 14
+      },
+      "colors": ["#6B7E69", "#849783", "#9FC0A0"],
+      "unit": "%",
+      "referenceValue": "",
+      "law": "",
+      "more": {
+        "en": "Acoustic comfort is a satisfactory status with acoustical condition in an environment. A lack in acoustic comfort has evident psychological consequences on humans, including stress and de-concentration. Some studies have shown how higher blood pressure, higher production of stress hormones and anxiety, reduction of the ability to remember and to focus on, are linked to elevated levels of noise",
+        "it": "Il comfort acustico è uno stato di soddisfazione verso le condizioni acustiche di un ambiente. La mancanza di comfort acustico ha evidenti conseguenze psicologiche sull'uomo, tra cui stress e deconcentrazione. Alcuni studi hanno dimostrato come l'aumento della pressione sanguigna, la maggiore produzione di ormoni dello stress e dell'ansia, la riduzione della capacità di ricordare e di concentrarsi siano legati a elevati livelli di pressione sonora."
+      },
+      "hints": {
+        "en": "Remember to respect other people's comfort and perception. If you need to talk, move away from other people or choose a separate conference room.",
+        "it": "Ricorda di rispettare il comfort e la percezione degli altri. Se hai bisogno di parlare, allontanati dalle altre persone o scegli una sala conferenze separata."
+      },
+      "description": {
+        "it": "Il comfort acustico è quella condizione, in un ambiente specifico, in cui l'utente percepisce una sensazione di benessere legata alle condizioni uditore.",
+        "en": "Acoustic comfort is that condition, in a specific environment, in which the user experiences a sense of well-being related to the hearing conditions."
+      }
+    }
+  }
+  

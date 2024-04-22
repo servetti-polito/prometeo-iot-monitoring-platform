@@ -1,0 +1,16 @@
+#
+# automatically configure the loki datasource in grafana
+#
+
+apiVersion: 1
+
+datasources:
+  - name: Thomas API 2
+    type: marcusolsson-json-datasource
+    # url: http://host.docker.internal:5002
+    url: http://scheduler-web-1:5002
+    editable: true
+    uid: d1777f53-05fe-4a30-a97a-e15b40c4ff4e
+    jsonData:
+      database: Grafana
+      maxIdleConnsAuto: true

@@ -1,0 +1,16 @@
+@media (max-height: 900px) {
+    .display-1{
+        font-size: 500%;
+    }
+    .display-3{
+        font-size: 300%;
+    }
+}
+@media (min-height: 901px) {
+    .display-1{
+        font-size: 500%;
+    }
+    .display-3{
+        font-size: 300%;
+    }
+}
