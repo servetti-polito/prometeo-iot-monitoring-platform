@@ -1,6 +1,6 @@
-# Promet&o software repository
+# PROMET&O software repository
 
-Software repository of the Promet&o research project developed at Politecnico di Torino by the:
+Software repository of the PROMET&O research project developed at Politecnico di Torino by the:
 - Laboratory of Applied Acoustics (LAA) and Technology Energy Building Environment (TEBE) group at the Dept. of Energy
 - microEMC group at the Dept. of Electronics and Telecommunications
 - Electronic CAD & Reliability group at the Dept. of Control and Computer Engineering
@@ -9,13 +9,13 @@ Software repository of the Promet&o research project developed at Politecnico di
 
 ## Software Architecture
 
-The Promet&o architecture is based on three main software layers: the IoT layer, the data processing layer, and the application layer.
+The PROMET&O architecture is based on three main software layers: the IoT layer, the data processing layer, and the application layer.
 
 ![architecture](docs/images/architecture.png)
 
 ## Code Overview
 
-This repository contains the source code of the building blocs of the Promet&o project:
+This repository contains the source code of the building blocs of the PROMET&O project:
 - [web-app](./web-app/) contains the source code of the web application layer that comprises an ingress proxy and a React application with its own database and IAM server.
 - [grafana](./grafana/) is a fork of the [Grafana repo](https://github.com/grafana/grafana) that is used by the web application 
 - [WS_Backend](./WS_Backend/) is planned to house the source code for the data processing layer in the near future.

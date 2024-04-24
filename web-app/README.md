@@ -1,6 +1,6 @@
-# Promet&o Application Layer
+# PROMET&O Application Layer
 
-This software is part of the Promet&o project and it contains the code of the application layer.
+This software is part of the PROMET&O project and it contains the code of the application layer.
 
 ## Code overview
 
