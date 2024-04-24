@@ -15,16 +15,16 @@ The PROMET&O architecture is based on three main software layers: the IoT layer,
 
 ## Code Overview
 
-This repository contains the source code of the building blocs of the PROMET&O project:
+This repository contains the source code of the building blocks of the PROMET&O project:
 - [web-app](./web-app/) contains the source code of the web application layer that comprises an ingress proxy and a React application with its own database and IAM server.
-- [grafana](./grafana/) is a fork of the [Grafana repo](https://github.com/grafana/grafana) that is used by the web application 
+- [grafana](./grafana/) is a fork of the [Grafana repo](https://github.com/grafana/grafana) that is used by the web application. 
 - [WS_Backend](./WS_Backend/) is planned to house the source code for the data processing layer in the near future.
 
 ### Pull request
 
 The fork of the Grafana project has been customized for better interaction with embedded panels and a [pull request](https://github.com/grafana/grafana/pull/86012) currently under review has been submitted to the original repository.
 
-**Detrails.** A new feature has been introduced to minimize the time, and the number of resources, that is needed to update an embedded panel. Instead of completely reload the panel we implemented a mechanism to exploit the [window.postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method that enables cross-origin communication between Window object, i.e., between the main page and the Grafana iframe embedded within it.
+**Details.** A new feature has been introduced to minimize the time, and the number of resources, that is needed to update an embedded panel. Instead of completely reload the panel we implemented a mechanism to exploit the [window.postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) method that enables cross-origin communication between Window object, i.e., between the main page and the Grafana iframe embedded within it.
 
 
 
